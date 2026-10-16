@@ -25,9 +25,8 @@
     </section>
     <section id="done" class="hidden done">
       <div class="check">✅</div>
-      <h1>You're all done!</h1>
+      <h1>Great Job! Report Complete!</h1>
       <p class="message">Great work today. You can return to Slack.</p>
-      <button id="again" type="button">Celebrate again</button>
     </section>
     <section id="empty" class="hidden done">
       <h1>CVT Celebrations</h1>
@@ -63,7 +62,6 @@
         else $('count').textContent = remaining;
       },1000);
     }
-    $('again').addEventListener('click',celebrate);
     Promise.all(imageNames.map(imageExists)).then(results=>{
       available = results.filter(Boolean);
       celebrate();
